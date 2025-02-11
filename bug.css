@@ -1,0 +1,9 @@
+The following CSS code snippet demonstrates an uncommon bug that can occur when using the `calc()` function with percentages and `em` units: 
+
+```css
+.container {
+  width: calc(50% - 2em);
+}
+```
+
+This code intends to make the `.container` element 50% of its parent's width minus 2em. However, this may not work as expected in all browsers, specifically when the parent element's width is not explicitly set.  The `calc()` function can produce unexpected results if the units involved are not all compatible or not properly resolved before calculation. In this case, the browser may not accurately convert `em` units to pixels or percentages unless a parent has an explicit width.
